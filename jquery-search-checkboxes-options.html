@@ -53,7 +53,8 @@
 </pre>
 
 <h2>The javascript:</h2>
-<!-- HTML generated using hilite.me --><pre style="margin: 0; line-height: 125%">		<span style="color: #f8f8f2">(</span><span style="color: #66d9ef">function</span> <span style="color: #f8f8f2">(</span><span style="color: #a6e22e">$</span><span style="color: #f8f8f2">)</span> <span style="color: #f8f8f2">{</span>
+<!-- HTML generated using hilite.me --><pre style="margin: 0; line-height: 125%">	<span style="color: #f92672">&lt;</span><span style="color: #a6e22e">script</span> <span style="color: #a6e22e">type</span><span style="color: #f92672">=</span><span style="color: #e6db74">&quot;text/javascript&quot;</span><span style="color: #f92672">&gt;</span>
+		<span style="color: #f8f8f2">(</span><span style="color: #66d9ef">function</span> <span style="color: #f8f8f2">(</span><span style="color: #a6e22e">$</span><span style="color: #f8f8f2">)</span> <span style="color: #f8f8f2">{</span>
 			<span style="color: #a6e22e">$</span><span style="color: #f8f8f2">(document).</span><span style="color: #a6e22e">ready</span><span style="color: #f8f8f2">(</span><span style="color: #66d9ef">function</span><span style="color: #f8f8f2">(){</span>
 	      <span style="color: #75715e">// Options search field</span>
 	      <span style="color: #a6e22e">$</span><span style="color: #f8f8f2">(</span><span style="color: #e6db74">&#39;#options&#39;</span><span style="color: #f8f8f2">).</span><span style="color: #a6e22e">before</span><span style="color: #f8f8f2">(</span>
@@ -70,9 +71,13 @@
 	      <span style="color: #75715e">// Search clear button</span>
 	      <span style="color: #a6e22e">$</span><span style="color: #f8f8f2">(</span><span style="color: #e6db74">&quot;#search-clear&quot;</span><span style="color: #f8f8f2">).</span><span style="color: #a6e22e">click</span><span style="color: #f8f8f2">(</span><span style="color: #66d9ef">function</span><span style="color: #f8f8f2">(){</span>
 	        <span style="color: #a6e22e">$</span><span style="color: #f8f8f2">(</span><span style="color: #e6db74">&quot;#search&quot;</span><span style="color: #f8f8f2">).</span><span style="color: #a6e22e">val</span><span style="color: #f8f8f2">(</span><span style="color: #e6db74">&quot;&quot;</span><span style="color: #f8f8f2">);</span>
+	        <span style="color: #a6e22e">$</span><span style="color: #f8f8f2">(</span><span style="color: #e6db74">&#39;input[type=checkbox]&#39;</span><span style="color: #f8f8f2">).</span><span style="color: #a6e22e">each</span><span style="color: #f8f8f2">(</span><span style="color: #66d9ef">function</span><span style="color: #f8f8f2">(){</span>
+	        	<span style="color: #a6e22e">$</span><span style="color: #f8f8f2">(</span><span style="color: #66d9ef">this</span><span style="color: #f8f8f2">).</span><span style="color: #a6e22e">parent</span><span style="color: #f8f8f2">().</span><span style="color: #a6e22e">show</span><span style="color: #f8f8f2">();</span>
+	        <span style="color: #f8f8f2">});</span>
 	      <span style="color: #f8f8f2">});</span>
 			<span style="color: #f8f8f2">});</span>
-		<span style="color: #f8f8f2">})(</span><span style="color: #a6e22e">jQuery</span><span style="color: #f8f8f2">);</span> 
+		<span style="color: #f8f8f2">})(</span><span style="color: #a6e22e">jQuery</span><span style="color: #f8f8f2">);</span>      
+	<span style="color: #f92672">&lt;</span><span style="color: #960050; background-color: #1e0010">/script&gt;</span>
 </pre>
 
 
