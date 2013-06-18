@@ -32,6 +32,9 @@
 	      // Search clear button
 	      $("#search-clear").click(function(){
 	        $("#search").val("");
+	        $('input[type=checkbox]').each(function(){
+	        	$(this).parent().show();
+	        });
 	      });
 			});
 		})(jQuery);      
