@@ -4,43 +4,82 @@
 
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-	<title>Your Website</title>
+	<title>jQuery search and filter checkboxes options</title>
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.5.1/jquery.min.js"></script>
+	<script type="text/javascript">
+		(function ($) {
+			$(document).ready(function(){
+	      // Options search field
+	      $('#options').before(
+	          '<input id="search" style="display: inline; width:180px;" type="text" />'
+	          +'<span><a href="" onclick="return false;" id="search-clear">X</a></span>'
+	          );
+	      $('#search').keyup(function(){
+	         var valThis = $(this).val().toLowerCase();
+	          $('input[type=checkbox]').each(function(){
+	              var text = $("label[for='"+$(this).attr('id')+"']").text().toLowerCase();
+	              (text.indexOf(valThis) == 0) ? $(this).parent().show() : $(this).parent().hide();
+	         });
+	      });
+	      // Search clear button
+	      $("#search-clear").click(function(){
+	        $("#search").val("");
+	      });
+			});
+		})(jQuery);      
+	</script>
 </head>
 
 <body>
+<h2>Checkboxes structure:</h2>
+<pre>
+&lt;div id=&quot;options&quot;&gt;<br/>
+&lt;input type=&quot;checkbox&quot; id=&quot;64&quot;&gt;&lt;label class=&quot;option&quot; for=&quot;64&quot;&gt;Option1&lt;/label&gt;<br/> 
+&lt;input type=&quot;checkbox&quot; id=&quot;64&quot;&gt;&lt;label class=&quot;option&quot; for=&quot;64&quot;&gt;Option2&lt;/label&gt;<br/>
+...<br/>
+&lt;/div&gt;
+</pre>
 
-	<header>
-		<nav>
-			<ul>
-				<li>Your menu</li>
-			</ul>
-		</nav>
-	</header>
-	
-	<section>
-	
-		<article>
-			<header>
-				<h2>Article title</h2>
-				<p>Posted on <time datetime="2009-09-04T16:31:24+02:00">September 4th 2009</time> by <a href="#">Writer</a> - <a href="#comments">6 comments</a></p>
-			</header>
-			<p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.</p>
-		</article>
-		
-		<article>
-			<header>
-				<h2>Article title</h2>
-				<p>Posted on <time datetime="2009-09-04T16:31:24+02:00">September 4th 2009</time> by <a href="#">Writer</a> - <a href="#comments">6 comments</a></p>
-			</header>
-			<p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.</p>
-		</article>
-		
-	</section>
+<h2>Demo:</h2>
 
-	<aside>
-		<h2>About section</h2>
-		<p>Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.</p>
-	</aside>
+<div id="options">
+<div class="option-64">
+	<input type="checkbox" id="64" value="64"><label class="option" for="64">Fenton</label>
+</div>
+<div class="option-71">
+	<input type="checkbox" id="71" value="71"><label class="option" for="71">Haywood</label>
+</div>
+<div class="option-101">
+	<input type="checkbox" id="101" value="101"><label class="option" for="101">Crofton</label>
+</div>
+<div class="option-40">
+	<input type="checkbox" id="40" value="40"><label class="option" for="40">Vic</label>
+</div>
+<div class="option-73">
+	<input type="checkbox" id="73" value="73"><label class="option" for="73">Alex</label>
+</div>
+<div class="option-128">
+	<input type="checkbox" id="128" value="128"><label class="option" for="128">Darien</label>
+</div>
+<div class="option-1">
+	<input type="checkbox" id="1" value="1"><label class="option" for="1">Vern</label>
+</div>
+<div class="option-97">
+	<input type="checkbox" id="97" value="97"><label class="option" for="97">Tommy</label>
+</div>
+<div class="option-72">
+	<input type="checkbox" id="72" value="72"><label class="option" for="72">Benedict</label>
+</div>
+<div class="option-33">
+	<input type="checkbox" id="33" value="33"><label class="option" for="33">Buck</label>
+</div>
+<div class="option-44">
+	<input type="checkbox" id="44" value="44"><label class="option" for="44">Earle</label>
+</div>
+<div class="option-140">
+	<input type="checkbox" id="140" value="140"><label class="option" for="140">Giles</label>
+</div>
+
 
 </body>
 
